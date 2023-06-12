@@ -4,4 +4,5 @@
 專案技術:  
 －　專案管理工具：　Maven
 －　前端：HTML、CSS、JavaScript、jQuery和 AJAX/Fetch，採用了B__E--M（業務邏輯-實體-模型）的設計模式。
-－　後端：Hibernate、Spring Boot框架和Spring Data JPA，並實現了RESTful API的設計風格。版本控制方面使用了Git。
+－　後端：Hibernate、Spring Boot框架和Spring Data JPA，並實現了RESTful API的設計風格。
+－　版本控制：Git、Github。
