@@ -1,0 +1,402 @@
+@import '../base/base';
+
+// $width: 90%;
+$width: 100%;
+
+.subtitle {
+  width: $width;
+  position: relative;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1.5rem auto;
+
+  &::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: $primary-blue;
+    position: absolute;
+    left: 0;
+    bottom: -50%;
+  }
+
+  // &:not(:first-child) {
+  //   margin: 1.5rem auto;
+  // }
+}
+
+.order {
+  width: $width;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: $secondary-gray;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  box-shadow: $shadow;
+
+  &__img {
+    width: 50%;
+    max-width: 250px;
+    height: 200px;
+    margin-right: 0.5rem;
+    position: relative;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      scale: 0.38;
+      transform-origin: 0 0;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    border-radius: $border-radius;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+  }
+
+  &__title {
+    width: 100%;
+    height: fit-content;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 28px;
+  }
+
+  &__desc {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-self: flex-end;
+    margin-top: 1rem;
+
+    label {
+      font-weight: bold;
+    }
+
+    input {
+      max-width: 100%;
+      border: none;
+      box-shadow: $shadow;
+      padding: 0 0.5rem;
+      border-radius: $input-radius;
+    }
+  }
+}
+
+.journey {
+  width: $width;
+  position: relative;
+  margin: auto;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  a {
+    width: 49%;
+    background-color: $secondary-gray;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+  }
+
+  &__card {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  .active {
+    border: 1px solid $primary-blue;
+    background-color: #afebff;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: $border-radius;
+    margin-right: 0.5rem;
+    box-shadow: $shadow;
+
+    img {
+      scale: 0.3;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: 0 0;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  a:hover &__img img {
+    scale: 0.35;
+  }
+
+  @media screen and (max-width: 992px) {
+    a {
+      width: 100%;
+    }
+
+    &__img {
+      position: relative;
+      width: 40%;
+      height: 150px;
+      overflow: hidden;
+      border-radius: $border-radius;
+      margin-right: 0.5rem;
+      box-shadow: $shadow;
+
+      img {
+        scale: 0.3;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 0 0;
+      }
+    }
+
+    a:hover &__img img {
+      scale: 0.35;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    font-size: 20px;
+    text-align: right;
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.booking {
+  width: $width;
+  margin: auto;
+  background-color: $secondary-gray;
+  border-radius: $border-radius;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+
+  input {
+    width: 50%;
+    padding: 0 0.5rem;
+  }
+
+  &__firstname {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  &__lastname {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  &__email {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  &__phone {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  &__number {
+    width: 50%;
+    padding: 0.5rem 0;
+  }
+
+  &__method {
+    width: 50%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    position: relative;
+    box-shadow: none;
+
+    input {
+      width: fit-content;
+      padding: 0 0.5rem;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    width: 150px;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  small {
+    width: 100%;
+    font-size: 16px;
+    color: $primary-gray;
+  }
+
+  input {
+    border: none;
+    box-shadow: $shadow;
+    border-radius: $input-radius;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+}
+
+.bill {
+  width: $width;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: $secondary-gray;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: $border-radius;
+  box-shadow: $shadow;
+  padding: 1rem;
+
+  &__card {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    line-height: 2;
+  }
+
+  &__title {
+    width: 100%;
+    color: $primary-blue;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__item {
+    width: 50%;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  &__value {
+    width: 50%;
+  }
+}
+
+.amount {
+  position: relative;
+  width: 100%;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: $primary-blue;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__item {
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__value {
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}
+
+.submit {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+
+  &__forward {
+    border: none;
+    padding: 0.5rem;
+    background-color: $primary-blue;
+    color: $white;
+    margin: 1rem 2rem;
+    border-radius: $border-radius;
+  }
+
+  &__forward:hover {
+    background-color: $primary-blue-hover;
+  }
+
+  &__return {
+    border: none;
+    background-color: $danger-red;
+    color: $white;
+    padding: 0.5rem;
+    margin: 1rem 2rem;
+    border-radius: $border-radius;
+  }
+
+  &__return:hover {
+    background-color: $danger-red-hover;
+  }
+}

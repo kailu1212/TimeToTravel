@@ -1,0 +1,497 @@
+// // 記得引入基本設定
+@import '../base/base';
+
+.custom-container {
+  min-height: calc(100dvh - 20px - 110px);
+}
+
+//------搜尋筆數------//
+.search-results-count {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin-left: auto;
+  border-radius: $input-radius;
+  // background-color: $primary-blue;
+  // color: $white;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 10px;
+}
+.checkbox_all {
+  display: flex;
+  padding: 5px 0 5px 0;
+}
+
+.check_all {
+  margin: 0 10px 0 10px;
+}
+//--------卡片------//
+.card {
+  margin-bottom: 10px;
+  -moz-box-shadow: 2px 2px 2px 2px #dadada;
+  -webkit-box-shadow: 2px 2px 2px 2px #dadada;
+  box-shadow: 2px 2px 2px 2px #dadada;
+  max-width: 100%;
+  height: 10%;
+  margin-left: 8px;
+}
+//卡片裡文字
+.card_word {
+  float: right;
+  width: 730px;
+  margin: 0 45px 0 0px;
+}
+
+@media (max-width: 1400px) {
+  .card_word {
+    width: 580px;
+  }
+}
+@media (max-width: 1200px) {
+  .card_word {
+    width: 430px;
+  }
+}
+@media (max-width: 1000px) {
+  .card_word {
+    width: 230px;
+  }
+}
+@media (max-width: 768px) {
+  .card_word {
+    width: 100px;
+  }
+}
+//卡片裡的標題
+.card-title {
+  font-weight: bold;
+}
+
+//卡片裡照片
+.pic_style {
+  max-width: 200px;
+  // max-height: 100%;
+  border-radius: 10px; //圓角
+  float: left;
+  margin-right: 10px;
+  // width: 100%;
+  // height: 100%;
+}
+
+//顯示文字行
+.multiline-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+//展開/縮排 按鈕
+.btn-primary {
+  float: right;
+  cursor: pointer;
+}
+
+//網址文字格式
+.url_style {
+  text-decoration: underline; //底線
+  font-size: 12px;
+}
+
+//--------天氣------//
+
+.weather {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 120px;
+  height: 30px;
+  // border-style: solid;
+  border-radius: 20px 0 0 20px;
+  background-color: #b5d2f1;
+  // background-image: url('https://img.ltn.com.tw/Upload/news/600/2019/03/30/phpUCF6ub.jpg');
+  background-size: cover;
+}
+
+.card-body {
+  position: relative;
+  padding: 20px;
+}
+//--------搜尋欄------//
+
+.tab {
+  background-color: #b3b2b2;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.tab.active {
+  background-color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+  background-color: #007bff;
+  border-radius: 0 10px 10px 10px; //圓角
+  margin-bottom: 10px;
+  // height: 50px;
+  -moz-box-shadow: 2px 2px 2px 2px #accefb;
+  -webkit-box-shadow: 2px 2px 2px 2px #accefb;
+  box-shadow: 2px 2px 2px 2px #accefb;
+}
+
+.tab-content.active {
+  display: flex;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: left;
+}
+
+#tab1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.search-hotel {
+  width: 8.5%;
+  background-color: $white;
+  border: none;
+  color: $primary-blue;
+  padding: 3px 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-location {
+  font-size: 14px;
+  width: 90%;
+  height: 30px;
+  color: #000000;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.search-start {
+  width: 40%;
+  border: none;
+  margin-right: 0.5rem;
+  padding: 3px 0.5rem;
+  border-radius: $input-radius;
+}
+
+.search-end {
+  width: 40%;
+  border: none;
+  margin-right: 0.5rem;
+  padding: 3px 0.5rem;
+  border-radius: $input-radius;
+}
+
+.search-option {
+  width: 17%;
+  border: none;
+  padding: 4px 0.5rem;
+  border-radius: $input-radius;
+}
+
+//分頁
+.page1 {
+  display: flex;
+  justify-content: center;
+}
+
+.hotel {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+
+  &__card {
+    width: 100%;
+    height: 180px;
+    border-radius: $border-radius;
+    display: flex;
+    padding: 0.5rem;
+    // justify-content: space-between;
+    border: 1.5px solid #007bff;
+    box-shadow: 0 4px 2px rgba($color: #000000, $alpha: 0.3);
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-right: 1rem;
+    box-shadow: $shadow;
+    border-radius: $border-radius;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      scale: 0.24;
+      transform-origin: 0 0;
+      box-shadow: $shadow;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__loading {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ccc;
+  }
+
+  &__card:hover {
+    background-color: #eee;
+
+    .hotel__img {
+      img {
+        scale: 0.25;
+      }
+    }
+  }
+
+  &__title {
+    height: fit-content;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  &__rank {
+    padding: 0;
+    margin: 0;
+    margin-left: 1rem;
+
+    li {
+      display: inline-block;
+    }
+
+    .fa-star {
+      font-size: 24px;
+      color: $rank-yellow;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    &__header {
+      flex-direction: column;
+    }
+
+    &__rank {
+      margin-left: 0;
+    }
+  }
+
+  &__address {
+    width: 100%;
+    display: block;
+    color: $secondary-blue;
+    height: fit-content;
+    margin: 0.5rem 0;
+  }
+
+  &__desc {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-top: 1rem;
+  }
+
+  &__price {
+    width: 100%;
+    text-align: right;
+
+    p {
+      display: inline-block;
+      font-size: 24px;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    a {
+      display: inline-block;
+      border: none;
+      font-size: 20px;
+      background-color: $primary-blue;
+      border-radius: $border-radius;
+      color: $white;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $primary-blue-hover;
+      }
+    }
+  }
+
+  &__favor {
+    border: none;
+    position: relative;
+    background-color: transparent;
+    color: $primary-blue;
+    font-size: 20px;
+    font-weight: bold;
+    float: left;
+    vertical-align: middle;
+    margin-top: 0.5rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: $primary-blue;
+      left: 0;
+      bottom: 0;
+      transition: all 0.1s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.not-found {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-direction: column;
+
+  img {
+    width: 25%;
+  }
+
+  &::before {
+    content: '未找到任何搜尋結果 :(';
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ccc;
+  }
+
+  &::after {
+    content: '請嘗試更換關鍵字';
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ccc;
+  }
+}
+
+.loader {
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: (-50% -50%);
+  text-indent: -9999em;
+  animation: mulShdSpin 1.1s infinite ease;
+  transform: translateZ(0);
+  z-index: 1;
+}
+@keyframes mulShdSpin {
+  0%,
+  100% {
+    box-shadow: 0em -2.6em 0em 0em #ffffff, 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.5), -1.8em -1.8em 0 0em rgba(255, 255, 255, 1);
+  }
+  12.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 1), 1.8em -1.8em 0 0em #ffffff,
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 0.2), -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.5), 1.8em -1.8em 0 0em rgba(255, 255, 255, 1),
+      2.5em 0em 0 0em #ffffff, 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2), 0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  37.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.5),
+      2.5em 0em 0 0em rgba(255, 255, 255, 1), 1.75em 1.75em 0 0em #ffffff, 0em 2.5em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.5), 1.75em 1.75em 0 0em rgba(255, 255, 255, 1), 0em 2.5em 0 0em #ffffff,
+      -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.2), -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  62.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.5),
+      0em 2.5em 0 0em rgba(255, 255, 255, 1), -1.8em 1.8em 0 0em #ffffff, -2.6em 0em 0 0em rgba(255, 255, 255, 0.2),
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.5), -1.8em 1.8em 0 0em rgba(255, 255, 255, 1), -2.6em 0em 0 0em #ffffff,
+      -1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2);
+  }
+  87.5% {
+    box-shadow: 0em -2.6em 0em 0em rgba(255, 255, 255, 0.2), 1.8em -1.8em 0 0em rgba(255, 255, 255, 0.2),
+      2.5em 0em 0 0em rgba(255, 255, 255, 0.2), 1.75em 1.75em 0 0em rgba(255, 255, 255, 0.2),
+      0em 2.5em 0 0em rgba(255, 255, 255, 0.2), -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
+      -2.6em 0em 0 0em rgba(255, 255, 255, 1), -1.8em -1.8em 0 0em #ffffff;
+  }
+}
